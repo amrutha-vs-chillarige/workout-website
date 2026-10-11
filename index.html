@@ -5,15 +5,16 @@
   <title>Standing Resistance Band Workouts</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #333;
       margin: 0;
       padding: 0;
       text-align: center;
     }
     header {
-      background: #333;
-      color: #fff;
+      background-color: #ff69b4;
+      color: white;
       padding: 20px;
     }
     nav {
@@ -22,51 +23,59 @@
     nav button {
       margin: 5px;
       padding: 10px 20px;
-      background: #007bff;
-      color: #fff;
+      background-color: #ff69b4;
+      color: white;
       border: none;
+      border-radius: 5px;
       cursor: pointer;
+      transition: 0.3s;
     }
     nav button:hover {
-      background: #0056b3;
+      background-color: #ff85c1;
     }
     .workout {
       display: none;
       margin: 20px auto;
-      max-width: 600px;
-      background: #fff;
+      max-width: 700px;
+      background-color: #ffe6f0;
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,105,180,0.3);
     }
     .exercise {
-      margin: 15px 0;
+      margin: 20px 0;
       padding: 10px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 2px solid #ffb6c1;
     }
-    .exercise a {
-      display: inline-block;
-      margin-top: 5px;
-      color: #007bff;
-      text-decoration: none;
-    }
-    .exercise a:hover {
-      text-decoration: underline;
+    iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 8px;
+      border: none;
     }
     #timer {
       font-size: 20px;
       margin: 20px;
+      color: #ff69b4;
     }
-    .done {
-      color: green;
-      font-weight: bold;
+    button#start, button#reset {
+      background-color: #ffb6c1;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button#start:hover, button#reset:hover {
+      background-color: #ff85c1;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Quick 10–15 Minute Standing Workouts</h1>
-    <p>4-Day Resistance Band Split</p>
+    <h1>💪 Standing Resistance Band Workouts</h1>
+    <p>Quick 10–15 Minute 4-Day Split</p>
   </header>
 
   <nav>
@@ -77,23 +86,23 @@
   </nav>
 
   <div id="timer">Timer: <span id="time">00:00</span></div>
-  <button onclick="startTimer()">Start 15-min Timer</button>
-  <button onclick="resetTimer()">Reset Timer</button>
+  <button id="start" onclick="startTimer()">Start 15-min Timer</button>
+  <button id="reset" onclick="resetTimer()">Reset Timer</button>
 
   <!-- Day 1 -->
   <div id="day1" class="workout">
     <h2>Day 1: Upper Body (Push)</h2>
     <div class="exercise">
-      <strong>Chest Press</strong> – 12–15 reps (Chest, Shoulders, Triceps)<br>
-      <a href="https://www.youtube.com/watch?v=6ZxQXwzYw9g" target="_blank">Watch Demo</a>
+      <strong>Chest Press</strong> – 12–15 reps (Chest, Shoulders, Triceps)
+      <iframe src="https://www.youtube.com/embed/6ZxQXwzYw9g" allowfullscreen></iframe>
     </div>
     <div class="exercise">
-      <strong>Shoulder Press</strong> – 12–15 reps (Shoulders, Triceps)<br>
-      <a href="https://www.youtube.com/watch?v=2z8JXzjZcXU" target="_blank">Watch Demo</a>
+      <strong>Shoulder Press</strong> – 12–15 reps (Shoulders, Triceps)
+      <iframe src="https://www.youtube.com/embed/2z8JXzjZcXU" allowfullscreen></iframe>
     </div>
     <div class="exercise">
-      <strong>Front Raise</strong> – 12–15 reps (Front Delts)<br>
-      <a href="https://www.youtube.com/watch?v=ZkzVYwYFf9c" target="_blank">Watch Demo</a>
+      <strong>Front Raise</strong> – 12–15 reps (Front Delts)
+      <iframe src="https://www.youtube.com/embed/ZkzVYwYFf9c" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -101,16 +110,16 @@
   <div id="day2" class="workout">
     <h2>Day 2: Lower Body</h2>
     <div class="exercise">
-      <strong>Band Squats</strong> – 12–15 reps (Quads, Glutes)<br>
-      <a href="https://www.youtube.com/watch?v=QfKzvZqgFfE" target="_blank">Watch Demo</a>
+      <strong>Band Squats</strong> – 12–15 reps (Quads, Glutes)
+      <iframe src="https://www.youtube.com/embed/QfKzvZqgFfE" allowfullscreen></iframe>
     </div>
     <div class="exercise">
-      <strong>Side Steps</strong> – 12–15 each side (Glutes, Hips)<br>
-      <a href="https://www.youtube.com/watch?v=KkzYwFf9c" target="_blank">Watch Demo</a>
+      <strong>Side Steps</strong> – 12–15 each side (Glutes, Hips)
+      <iframe src="https://www.youtube.com/embed/KkzYwFf9c" allowfullscreen></iframe>
     </div>
     <div class="exercise">
-      <strong>Calf Raise</strong> – 15–20 reps (Calves)<br>
-      <a href="https://www.youtube.com/watch?v=YMmgqO8Jo-k" target="_blank">Watch Demo</a>
+      <strong>Calf Raise</strong> – 15–20 reps (Calves)
+      <iframe src="https://www.youtube.com/embed/YMmgqO8Jo-k" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -118,16 +127,16 @@
   <div id="day3" class="workout">
     <h2>Day 3: Upper Body (Pull)</h2>
     <div class="exercise">
-      <strong>Band Rows</strong> – 12–15 reps (Back, Biceps)<br>
-      <a href="https://www.youtube.com/watch?v=QkzYwFf9c" target="_blank">Watch Demo</a>
+      <strong>Band Rows</strong> – 12–15 reps (Back, Biceps)
+      <iframe src="https://www.youtube.com/embed/QkzYwFf9c" allowfullscreen></iframe>
     </div>
     <div class="exercise">
-      <strong>Bicep Curl</strong> – 12–15 reps (Biceps)<br>
-      <a href="https://www.youtube.com/watch?v=2z8JXzjZcXU" target="_blank">Watch Demo</a>
+      <strong>Bicep Curl</strong> – 12–15 reps (Biceps)
+      <iframe src="https://www.youtube.com/embed/2z8JXzjZcXU" allowfullscreen></iframe>
     </div>
     <div class="exercise">
-      <strong>Face Pulls</strong> – 12–15 reps (Rear Delts, Traps)<br>
-      <a href="https://www.youtube.com/watch?v=6ZxQXwzYw9g" target="_blank">Watch Demo</a>
+      <strong>Face Pulls</strong> – 12–15 reps (Rear Delts, Traps)
+      <iframe src="https://www.youtube.com/embed/6ZxQXwzYw9g" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -135,16 +144,16 @@
   <div id="day4" class="workout">
     <h2>Day 4: Core & Stability</h2>
     <div class="exercise">
-      <strong>Pallof Press</strong> – 12–15 reps (Core, Obliques)<br>
-      <a href="https://www.youtube.com/watch?v=YMmgqO8Jo-k" target="_blank">Watch Demo</a>
+      <strong>Pallof Press</strong> – 12–15 reps (Core, Obliques)
+      <iframe src="https://www.youtube.com/embed/YMmgqO8Jo-k" allowfullscreen></iframe>
     </div>
     <div class="exercise">
-      <strong>Side Crunch</strong> – 12–15 each side (Obliques)<br>
-      <a href="https://www.youtube.com/watch?v=QfKzvZqgFfE" target="_blank">Watch Demo</a>
+      <strong>Side Crunch</strong> – 12–15 each side (Obliques)
+      <iframe src="https://www.youtube.com/embed/QfKzvZqgFfE" allowfullscreen></iframe>
     </div>
     <div class="exercise">
-      <strong>Woodchop</strong> – 12–15 each side (Core, Shoulders)<br>
-      <a href="https://www.youtube.com/watch?v=ZkzVYwYFf9c" target="_blank">Watch Demo</a>
+      <strong>Woodchop</strong> – 12–15 each side (Core, Shoulders)
+      <iframe src="https://www.youtube.com/embed/ZkzVYwYFf9c" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -156,7 +165,7 @@
 
     let timerInterval;
     function startTimer() {
-      let timeLeft = 15 * 60; // 15 minutes
+      let timeLeft = 15 * 60;
       clearInterval(timerInterval);
       timerInterval = setInterval(() => {
         let minutes = Math.floor(timeLeft / 60);
