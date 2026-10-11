@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Standing Resistance Band Workouts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+    }
+    nav {
+      margin: 20px;
+    }
+    nav button {
+      margin: 5px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #0056b3;
+    }
+    .workout {
+      display: none;
+      margin: 20px auto;
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .exercise {
+      margin: 15px 0;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .exercise a {
+      display: inline-block;
+      margin-top: 5px;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .exercise a:hover {
+      text-decoration: underline;
+    }
+    #timer {
+      font-size: 20px;
+      margin: 20px;
+    }
+    .done {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quick 10–15 Minute Standing Workouts</h1>
+    <p>4-Day Resistance Band Split</p>
+  </header>
+
+  <nav>
+    <button onclick="showWorkout('day1')">Day 1: Upper Push</button>
+    <button onclick="showWorkout('day2')">Day 2: Lower Body</button>
+    <button onclick="showWorkout('day3')">Day 3: Upper Pull</button>
+    <button onclick="showWorkout('day4')">Day 4: Core & Stability</button>
+  </nav>
+
+  <div id="timer">Timer: <span id="time">00:00</span></div>
+  <button onclick="startTimer()">Start 15-min Timer</button>
+  <button onclick="resetTimer()">Reset Timer</button>
+
+  <!-- Day 1 -->
+  <div id="day1" class="workout">
+    <h2>Day 1: Upper Body (Push)</h2>
+    <div class="exercise">
+      <strong>Chest Press</strong> – 12–15 reps (Chest, Shoulders, Triceps)<br>
+      <a href="https://www.youtube.com/watch?v=6ZxQXwzYw9g" target="_blank">Watch Demo</a>
+    </div>
+    <div class="exercise">
+      <strong>Shoulder Press</strong> – 12–15 reps (Shoulders, Triceps)<br>
+      <a href="https://www.youtube.com/watch?v=2z8JXzjZcXU" target="_blank">Watch Demo</a>
+    </div>
+    <div class="exercise">
+      <strong>Front Raise</strong> – 12–15 reps (Front Delts)<br>
+      <a href="https://www.youtube.com/watch?v=ZkzVYwYFf9c" target="_blank">Watch Demo</a>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div id="day2" class="workout">
+    <h2>Day 2: Lower Body</h2>
+    <div class="exercise">
+      <strong>Band Squats</strong> – 12–15 reps (Quads, Glutes)<br>
+      <a href="https://www.youtube.com/watch?v=QfKzvZqgFfE" target="_blank">Watch Demo</a>
+    </div>
+    <div class="exercise">
+      <strong>Side Steps</strong> – 12–15 each side (Glutes, Hips)<br>
+      <a href="https://www.youtube.com/watch?v=KkzYwFf9c" target="_blank">Watch Demo</a>
+    </div>
+    <div class="exercise">
+      <strong>Calf Raise</strong> – 15–20 reps (Calves)<br>
+      <a href="https://www.youtube.com/watch?v=YMmgqO8Jo-k" target="_blank">Watch Demo</a>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div id="day3" class="workout">
+    <h2>Day 3: Upper Body (Pull)</h2>
+    <div class="exercise">
+      <strong>Band Rows</strong> – 12–15 reps (Back, Biceps)<br>
+      <a href="https://www.youtube.com/watch?v=QkzYwFf9c" target="_blank">Watch Demo</a>
+    </div>
+    <div class="exercise">
+      <strong>Bicep Curl</strong> – 12–15 reps (Biceps)<br>
+      <a href="https://www.youtube.com/watch?v=2z8JXzjZcXU" target="_blank">Watch Demo</a>
+    </div>
+    <div class="exercise">
+      <strong>Face Pulls</strong> – 12–15 reps (Rear Delts, Traps)<br>
+      <a href="https://www.youtube.com/watch?v=6ZxQXwzYw9g" target="_blank">Watch Demo</a>
+    </div>
+  </div>
+
+  <!-- Day 4 -->
+  <div id="day4" class="workout">
+    <h2>Day 4: Core & Stability</h2>
+    <div class="exercise">
+      <strong>Pallof Press</strong> – 12–15 reps (Core, Obliques)<br>
+      <a href="https://www.youtube.com/watch?v=YMmgqO8Jo-k" target="_blank">Watch Demo</a>
+    </div>
+    <div class="exercise">
+      <strong>Side Crunch</strong> – 12–15 each side (Obliques)<br>
+      <a href="https://www.youtube.com/watch?v=QfKzvZqgFfE" target="_blank">Watch Demo</a>
+    </div>
+    <div class="exercise">
+      <strong>Woodchop</strong> – 12–15 each side (Core, Shoulders)<br>
+      <a href="https://www.youtube.com/watch?v=ZkzVYwYFf9c" target="_blank">Watch Demo</a>
+    </div>
+  </div>
+
+  <script>
+    function showWorkout(day) {
+      document.querySelectorAll('.workout').forEach(div => div.style.display = 'none');
+      document.getElementById(day).style.display = 'block';
+    }
+
+    let timerInterval;
+    function startTimer() {
+      let timeLeft = 15 * 60; // 15 minutes
+      clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+        document.getElementById('time').textContent =
+          String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+        timeLeft--;
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          alert("Workout complete!");
+        }
+      }, 1000);
+    }
+    function resetTimer() {
+      clearInterval(timerInterval);
+      document.getElementById('time').textContent = "00:00";
+    }
+  </script>
+</body>
+</html>
